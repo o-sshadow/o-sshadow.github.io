@@ -40,6 +40,7 @@
             --dark: #0f172a;
             --darker: #020617;
             --light: #f8fafc;
+            --success-alpha: rgba(16, 185, 129, 0.15);
             --glass: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
             --shadow: rgba(0, 0, 0, 0.3);
@@ -241,10 +242,30 @@
         .card-revision { --card-color: var(--accent); }
         .card-casino { --card-color: var(--warning); }
         .card-proxy { --card-color: var(--danger); }
+        .card-browse { --card-color: var(--success); }
 
         .card:hover .card-icon {
             color: var(--card-color);
             filter: drop-shadow(0 0 20px var(--card-color));
+        }
+
+        .badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .badge-beta {
+            border: 1px solid var(--success);
+            color: var(--success);
+            background: var(--success-alpha);
+            box-shadow: 0 0 0 2px var(--success-alpha);
         }
 
         /* Credits Section */
@@ -361,6 +382,13 @@
                 <i class="card-icon fas fa-shield-alt"></i>
                 <h2 class="card-title">Web Proxy</h2>
                 <p class="card-desc">Secure and anonymous web browsing experience</p>
+            </a>
+
+            <a href="https://browse.pandapvp.net" class="card card-browse">
+                <span class="badge badge-beta">Beta</span>
+                <i class="card-icon fas fa-compass"></i>
+                <h2 class="card-title">Browse</h2>
+                <p class="card-desc">Explore our new browsing experience</p>
             </a>
 
             <a href="https://o-sshadow-revision.netlify.app/" class="card card-revision">
